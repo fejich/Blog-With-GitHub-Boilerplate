@@ -8,11 +8,13 @@ source_dir = "../src/"
 build_dir = "../dist/"
 index_page_size = 10
 archives_page_size = 20
-template = {
-    "name": "Galileo",
-    "type": "local",
-    "path": "../Galileo"
-}
+#template = {
+#    "name": "Galileo",
+#    "type": "local",
+#    "path": "../Galileo"
+#}
+template = "Kepler"
+
 enable_jsdelivr = {
     "enabled": True,
     "repo": "fejich/fejich.github.io@gh-pages"
@@ -92,5 +94,3 @@ valine = {
     "appId": "lslkachJjiWR2FD0NiAxSuHH-gzGzoHsz",
     "appKey": "8YljktyttMGfrlKNHCDV3DPF",
 }
-
-template = "Kepler"
