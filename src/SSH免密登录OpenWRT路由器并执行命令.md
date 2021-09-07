@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SSH免密登录 OpenWRT路由器
+title: SSH免密登录OpenWRT路由器并执行命令
 slug: ssh_autologin
 date: 2021-09-07 19:30
 status: publish
