@@ -92,3 +92,5 @@ valine = {
     "appId": "lslkachJjiWR2FD0NiAxSuHH-gzGzoHsz",
     "appKey": "8YljktyttMGfrlKNHCDV3DPF",
 }
+
+template = "Kepler"
