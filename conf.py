@@ -35,12 +35,12 @@ external_links = [
         "name": "Maverick",
         "url": "https://github.com/AlanDecode/Maverick",
         "brief": "🏄‍ Go My Own Way."
-    },
-    {
-        "name": "三無計劃",
-        "url": "https://www.imalan.cn",
-        "brief": "熊猫小A的主页。"
     }
+#    {
+#        "name": "三無計劃",
+#        "url": "https://www.imalan.cn",
+#        "brief": "熊猫小A的主页。"
+#    }
 ]
 nav = [
     {
@@ -52,12 +52,12 @@ nav = [
         "name": "归档",
         "url": "${site_prefix}archives/",
         "target": "_self"
-    },
-    {
-        "name": "关于",
-        "url": "${site_prefix}about/",
-        "target": "_self"
     }
+#    {
+#        "name": "关于",
+#        "url": "${site_prefix}about/",
+#        "target": "_self"
+#    }
 ]
 
 social_links = [
