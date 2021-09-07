@@ -19,13 +19,13 @@ enable_jsdelivr = {
 }
 
 # 站点设置
-site_name = "个人小分享"
+site_name = "瞎折腾分享"
 site_logo = "${static_prefix}logo.png"
 site_build_date = "2019-12-18T16:51+08:00"
 author = "fejich"
 email = "hi@imalan.cn"
 author_homepage = "https://github.com/fejich"
-description = "只坚持一种正义。我的正义。"
+description = "记录分享一些使用经验"
 key_words = ['Maverick', '熊猫小A', 'Galileo', 'blog']
 language = 'zh-CN'
 external_links = [
