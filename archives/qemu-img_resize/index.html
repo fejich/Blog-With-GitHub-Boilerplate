@@ -19,7 +19,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/b081281f8744e6e16f56a53855eb866c.json"
+            api: "https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/eaa9c365c98e5ea5e293b704f29d1bb7.json"
         }
     </script>
     
@@ -86,68 +86,57 @@
 <h1>1）调整虚拟硬盘容量</h1>
 <p>务必虚拟机关机情况下再操作</p>
 <p><code>qemu-img resize 30G.img -- +70G</code></p>
-<p>原本只分配了 30G 虚拟硬盘容量，后期不够用
-使用 qemu-img 命令给虚拟硬盘增加 70G 容量</p>
+<blockquote><p>使用 qemu-img 命令给虚拟硬盘增加 70G 容量</p>
+</blockquote>
 <h1>2）使用 fdisk 无损扩容</h1>
 <p><code>fdisk 30G.img</code></p>
-<p>具体操作记录，注意看 #号后面的中文注解</p>
-<div class="highlight"><pre><span></span>Welcome to fdisk <span class="o">(</span>util-linux <span class="m">2</span>.34<span class="o">)</span>.
-Changes will remain <span class="k">in</span> memory only, <span class="k">until</span> you decide to write them.
-Be careful before using the write command.
-
-
-Command <span class="o">(</span>m <span class="k">for</span> <span class="nb">help</span><span class="o">)</span>: p <span class="c1">#查看硬盘信息</span>
-Disk vdisk2.img: <span class="m">100</span> GiB, <span class="m">107374182400</span> bytes, <span class="m">209715200</span> sectors
-Units: sectors of <span class="m">1</span> * <span class="nv">512</span> <span class="o">=</span> <span class="m">512</span> bytes
-Sector size <span class="o">(</span>logical/physical<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
-I/O size <span class="o">(</span>minimum/optimal<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
+<blockquote><p>具体操作记录，注意看 #号后面的中文注解
+```shell
+Welcome to fdisk (util-linux 2.34).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.</p>
+</blockquote>
+<p>Command (m for help): p #查看硬盘信息
+Disk vdisk2.img: 100 GiB, 107374182400 bytes, 209715200 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
 Disklabel type: dos
-Disk identifier: 0xed294359
-
-Device      Boot   Start      End  Sectors  Size Id Type
-vdisk2.img1         <span class="m">2048</span>  <span class="m">4982527</span>  <span class="m">4980480</span>  <span class="m">2</span>.4G fd Linux raid autodetect
-vdisk2.img2      <span class="m">4982528</span>  <span class="m">9176831</span>  <span class="m">4194304</span>    2G fd Linux raid autodetect
-vdisk2.img3      <span class="m">9437184</span> <span class="m">62709759</span> <span class="m">53272576</span> <span class="m">25</span>.4G fd Linux raid autodetect  <span class="c1">#记录下第三分区的开始位置 9437184，后边要用到</span>
-
-Command <span class="o">(</span>m <span class="k">for</span> <span class="nb">help</span><span class="o">)</span>: d <span class="c1">#首先删掉分区</span>
-Partition number <span class="o">(</span><span class="m">1</span>-3, default <span class="m">3</span><span class="o">)</span>: 
-
-Partition <span class="m">3</span> has been deleted.
-
-Command <span class="o">(</span>m <span class="k">for</span> <span class="nb">help</span><span class="o">)</span>: n <span class="c1">#然后新建一个，按默认选主分区跟编号即可</span>
-Partition <span class="nb">type</span>
-   p   primary <span class="o">(</span><span class="m">2</span> primary, <span class="m">0</span> extended, <span class="m">2</span> free<span class="o">)</span>
-   e   extended <span class="o">(</span>container <span class="k">for</span> logical partitions<span class="o">)</span>
-Select <span class="o">(</span>default p<span class="o">)</span>: 
-
-Using default response p.
-Partition number <span class="o">(</span><span class="m">3</span>,4, default <span class="m">3</span><span class="o">)</span>: 
-First sector <span class="o">(</span><span class="m">9176832</span>-209715199, default <span class="m">9177088</span><span class="o">)</span>: <span class="m">9437184</span> <span class="c1">#这里是无损扩容的关键，必须不能填错</span>
-Last sector, +/-sectors or +/-size<span class="o">{</span>K,M,G,T,P<span class="o">}</span> <span class="o">(</span><span class="m">9437184</span>-209715199, default <span class="m">209715199</span><span class="o">)</span>: 
-
-Created a new partition <span class="m">3</span> of <span class="nb">type</span> <span class="s1">&#39;Linux&#39;</span> and of size <span class="m">95</span>.5 GiB.
-Partition <span class="c1">#3 contains a linux_raid_member signature.</span>
-
-Do you want to remove the signature? <span class="o">[</span>Y<span class="o">]</span>es/<span class="o">[</span>N<span class="o">]</span>o: n <span class="c1"># 必须选 N ，不要移除签名</span>
-
-Command <span class="o">(</span>m <span class="k">for</span> <span class="nb">help</span><span class="o">)</span>: p <span class="c1">#再次查看信息已经看到分区是扩容状态</span>
-
-Disk vdisk2.img: <span class="m">100</span> GiB, <span class="m">107374182400</span> bytes, <span class="m">209715200</span> sectors
-Units: sectors of <span class="m">1</span> * <span class="nv">512</span> <span class="o">=</span> <span class="m">512</span> bytes
-Sector size <span class="o">(</span>logical/physical<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
-I/O size <span class="o">(</span>minimum/optimal<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
+Disk identifier: 0xed294359</p>
+<p>Device      Boot   Start      End  Sectors  Size Id Type
+vdisk2.img1         2048  4982527  4980480  2.4G fd Linux raid autodetect
+vdisk2.img2      4982528  9176831  4194304    2G fd Linux raid autodetect
+vdisk2.img3      9437184 62709759 53272576 25.4G fd Linux raid autodetect  #记录下第三分区的开始位置 9437184，后边要用到</p>
+<p>Command (m for help): d #首先删掉分区
+Partition number (1-3, default 3):</p>
+<p>Partition 3 has been deleted.</p>
+<p>Command (m for help): n #然后新建一个，按默认选主分区跟编号即可
+Partition type
+   p   primary (2 primary, 0 extended, 2 free)
+   e   extended (container for logical partitions)
+Select (default p):</p>
+<p>Using default response p.
+Partition number (3,4, default 3): 
+First sector (9176832-209715199, default 9177088): 9437184 #这里是无损扩容的关键，必须不能填错
+Last sector, +/-sectors or +/-size{K,M,G,T,P} (9437184-209715199, default 209715199):</p>
+<p>Created a new partition 3 of type 'Linux' and of size 95.5 GiB.
+Partition #3 contains a linux_raid_member signature.</p>
+<p>Do you want to remove the signature? [Y]es/[N]o: n # 必须选 N ，不要移除签名</p>
+<p>Command (m for help): p #再次查看信息已经看到分区是扩容状态</p>
+<p>Disk vdisk2.img: 100 GiB, 107374182400 bytes, 209715200 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
 Disklabel type: dos
-Disk identifier: 0xed294359
-
-Device      Boot   Start       End   Sectors  Size Id Type
-vdisk2.img1         <span class="m">2048</span>   <span class="m">4982527</span>   <span class="m">4980480</span>  <span class="m">2</span>.4G fd Linux raid autodetect
-vdisk2.img2      <span class="m">4982528</span>   <span class="m">9176831</span>   <span class="m">4194304</span>    2G fd Linux raid autodetect
-vdisk2.img3      <span class="m">9437184</span> <span class="m">209715199</span> <span class="m">200278016</span> <span class="m">95</span>.5G <span class="m">83</span> Linux
-
-Command <span class="o">(</span>m <span class="k">for</span> <span class="nb">help</span><span class="o">)</span>: w <span class="c1">#最后按 w 保存分区表</span>
+Disk identifier: 0xed294359</p>
+<p>Device      Boot   Start       End   Sectors  Size Id Type
+vdisk2.img1         2048   4982527   4980480  2.4G fd Linux raid autodetect
+vdisk2.img2      4982528   9176831   4194304    2G fd Linux raid autodetect
+vdisk2.img3      9437184 209715199 200278016 95.5G 83 Linux</p>
+<p>Command (m for help): w #最后按 w 保存分区表
 The partition table has been altered.
 Syncing disks.
-</pre></div>
+```</p>
 <h1>3）打开虚拟机，使用 存储空间管理员 扩容即可</h1>
 <p>点 <code>管理</code>，按提示操作</p>
 <p><figure style="flex: 74.33628318584071" ><img width="1008" height="678" src="https://raw.githubusercontent.com/fejich/fejich.github.io/source/src/images/%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4%E7%AE%A1%E7%90%86%E5%91%98.png" /><figcaption>存储空间管理员</figcaption></figure></p>
