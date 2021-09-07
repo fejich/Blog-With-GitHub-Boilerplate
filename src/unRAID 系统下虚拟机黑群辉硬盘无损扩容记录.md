@@ -29,6 +29,8 @@ excerpt: 原本只分配了 30G 虚拟硬盘容量，后期空间不够用所以
 `fdisk 30G.img`
 
 > 具体操作记录，注意看 #号后面的中文注解
+
+
 ```shell
 Welcome to fdisk (util-linux 2.34).
 Changes will remain in memory only, until you decide to write them.
