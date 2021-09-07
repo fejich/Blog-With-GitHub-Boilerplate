@@ -28,12 +28,12 @@ author = "fejich"
 email = "hi@imalan.cn"
 author_homepage = "https://github.com/fejich"
 description = "记录分享一些使用经验"
-key_words = ['Maverick', '熊猫小A', 'Galileo', 'blog']
+key_words = ['Maverick', 'GitHub', 'Share', 'blog']
 language = 'zh-CN'
 external_links = [
     {
         "name": "Maverick",
-        "url": "https://github.com/AlanDecode/Maverick",
+        "url": "https://sspai.com/post/58013",
         "brief": "🏄‍ Go My Own Way."
     }
 #    {
