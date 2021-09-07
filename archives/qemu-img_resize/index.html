@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Maverick,熊猫小A,Galileo,blog" />
+    <meta name="generator" content="Maverick 1.1" />
+    <meta name="template" content="Galileo" />
+    <link rel="alternate" type="application/rss+xml" title="瞎折腾分享 &raquo; RSS 2.0" href="/feed/index.xml" />
+    <link rel="alternate" type="application/atom+xml" title="瞎折腾分享 &raquo; ATOM 1.0" href="/feed/atom/index.xml" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/assets/galileo-3f4dcc35c9.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/assets/ExSearch/ExSearch-182e5a8868.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/assets/katex.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700&display=swap">
+    <script>
+        var ExSearchConfig = {
+            root: "",
+            api: "https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/b081281f8744e6e16f56a53855eb866c.json"
+        }
+    </script>
+    
+<title>unRAID 系统下虚拟机黑群辉硬盘无损扩容记录 - 瞎折腾分享</title>
+<meta name="author" content="fejich" />
+<meta name="description" content="原本只分配了 30G 虚拟硬盘容量，后期空间不够用所以了这次扩容" />
+<meta property="og:title" content="unRAID 系统下虚拟机黑群辉硬盘无损扩容记录 - 瞎折腾分享" />
+<meta property="og:description" content="原本只分配了 30G 虚拟硬盘容量，后期空间不够用所以了这次扩容" />
+<meta property="og:site_name" content="瞎折腾分享" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/archives/qemu-img_resize/" />
+<meta property="og:image" content="" />
+<meta property="article:published_time" content="2021-09-07T15:20:00-00.00" />
+<meta name="twitter:title" content="unRAID 系统下虚拟机黑群辉硬盘无损扩容记录 - 瞎折腾分享" />
+<meta name="twitter:description" content="原本只分配了 30G 虚拟硬盘容量，后期空间不够用所以了这次扩容" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="" />
+
+
+    
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+
+    </head>
+    
+    <body>
+        
+        <div class="container">
+            <header id="ga-header">
+                <div first>
+                    <aside id="ga-brand">
+                        <h1 class="brand"><a class="no-style" href="/">瞎折腾分享</a></h1>
+                        <p>记录分享一些使用经验</p>
+                    </aside>
+                </div>
+                <div second id="ga-nav">
+                    <nav class="navs">
+                        <ul><li><a class="ga-highlight" href="/" target="_self">首页</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/archives/" target="_self">归档</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/about/" target="_self">关于</a></li><span class="separator">·</span><li><a href="#" target="_self" class="search-form-input ga-highlight">搜索</a></li></ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="wrapper">
+                
+<main>    
+    <section class="ga-section ga-content">
+        <article class="yue">
+            <h1 class="ga-post_title">unRAID 系统下虚拟机黑群辉硬盘无损扩容记录</h1>
+            <span class="ga-post_meta ga-mono">
+                <span>fejich</span>
+                <time>
+                    2021-09-07
+                </time>
+                
+                in <a no-style class="category" href="/category/默认分类/">
+                    默认分类
+                </a>
+                
+                
+            </span>
+            <div class="ga-content_body">
+                <h1>0）测试环境</h1>
+<p>黑群辉DSM 6.1.X，Basic 磁盘，btrfs 分区格式
+虚拟硬盘为 img 格式，原始容量 30G</p>
+<h1>1）调整虚拟硬盘容量</h1>
+<p>务必虚拟机关机情况下再操作</p>
+<p><code>qemu-img resize 30G.img -- +70G</code></p>
+<p>原本只分配了 30G 虚拟硬盘容量，后期不够用
+使用 qemu-img 命令给虚拟硬盘增加 70G 容量</p>
+<h1>2）使用 fdisk 无损扩容</h1>
+<p><code>fdisk 30G.img</code></p>
+<p>具体操作记录，注意看 #号后面的中文注解</p>
+<div class="highlight"><pre><span></span>Welcome to fdisk <span class="o">(</span>util-linux <span class="m">2</span>.34<span class="o">)</span>.
+Changes will remain <span class="k">in</span> memory only, <span class="k">until</span> you decide to write them.
+Be careful before using the write command.
+
+
+Command <span class="o">(</span>m <span class="k">for</span> <span class="nb">help</span><span class="o">)</span>: p <span class="c1">#查看硬盘信息</span>
+Disk vdisk2.img: <span class="m">100</span> GiB, <span class="m">107374182400</span> bytes, <span class="m">209715200</span> sectors
+Units: sectors of <span class="m">1</span> * <span class="nv">512</span> <span class="o">=</span> <span class="m">512</span> bytes
+Sector size <span class="o">(</span>logical/physical<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
+I/O size <span class="o">(</span>minimum/optimal<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
+Disklabel type: dos
+Disk identifier: 0xed294359
+
+Device      Boot   Start      End  Sectors  Size Id Type
+vdisk2.img1         <span class="m">2048</span>  <span class="m">4982527</span>  <span class="m">4980480</span>  <span class="m">2</span>.4G fd Linux raid autodetect
+vdisk2.img2      <span class="m">4982528</span>  <span class="m">9176831</span>  <span class="m">4194304</span>    2G fd Linux raid autodetect
+vdisk2.img3      <span class="m">9437184</span> <span class="m">62709759</span> <span class="m">53272576</span> <span class="m">25</span>.4G fd Linux raid autodetect  <span class="c1">#记录下第三分区的开始位置 9437184，后边要用到</span>
+
+Command <span class="o">(</span>m <span class="k">for</span> <span class="nb">help</span><span class="o">)</span>: d <span class="c1">#首先删掉分区</span>
+Partition number <span class="o">(</span><span class="m">1</span>-3, default <span class="m">3</span><span class="o">)</span>: 
+
+Partition <span class="m">3</span> has been deleted.
+
+Command <span class="o">(</span>m <span class="k">for</span> <span class="nb">help</span><span class="o">)</span>: n <span class="c1">#然后新建一个，按默认选主分区跟编号即可</span>
+Partition <span class="nb">type</span>
+   p   primary <span class="o">(</span><span class="m">2</span> primary, <span class="m">0</span> extended, <span class="m">2</span> free<span class="o">)</span>
+   e   extended <span class="o">(</span>container <span class="k">for</span> logical partitions<span class="o">)</span>
+Select <span class="o">(</span>default p<span class="o">)</span>: 
+
+Using default response p.
+Partition number <span class="o">(</span><span class="m">3</span>,4, default <span class="m">3</span><span class="o">)</span>: 
+First sector <span class="o">(</span><span class="m">9176832</span>-209715199, default <span class="m">9177088</span><span class="o">)</span>: <span class="m">9437184</span> <span class="c1">#这里是无损扩容的关键，必须不能填错</span>
+Last sector, +/-sectors or +/-size<span class="o">{</span>K,M,G,T,P<span class="o">}</span> <span class="o">(</span><span class="m">9437184</span>-209715199, default <span class="m">209715199</span><span class="o">)</span>: 
+
+Created a new partition <span class="m">3</span> of <span class="nb">type</span> <span class="s1">&#39;Linux&#39;</span> and of size <span class="m">95</span>.5 GiB.
+Partition <span class="c1">#3 contains a linux_raid_member signature.</span>
+
+Do you want to remove the signature? <span class="o">[</span>Y<span class="o">]</span>es/<span class="o">[</span>N<span class="o">]</span>o: n <span class="c1"># 必须选 N ，不要移除签名</span>
+
+Command <span class="o">(</span>m <span class="k">for</span> <span class="nb">help</span><span class="o">)</span>: p <span class="c1">#再次查看信息已经看到分区是扩容状态</span>
+
+Disk vdisk2.img: <span class="m">100</span> GiB, <span class="m">107374182400</span> bytes, <span class="m">209715200</span> sectors
+Units: sectors of <span class="m">1</span> * <span class="nv">512</span> <span class="o">=</span> <span class="m">512</span> bytes
+Sector size <span class="o">(</span>logical/physical<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
+I/O size <span class="o">(</span>minimum/optimal<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
+Disklabel type: dos
+Disk identifier: 0xed294359
+
+Device      Boot   Start       End   Sectors  Size Id Type
+vdisk2.img1         <span class="m">2048</span>   <span class="m">4982527</span>   <span class="m">4980480</span>  <span class="m">2</span>.4G fd Linux raid autodetect
+vdisk2.img2      <span class="m">4982528</span>   <span class="m">9176831</span>   <span class="m">4194304</span>    2G fd Linux raid autodetect
+vdisk2.img3      <span class="m">9437184</span> <span class="m">209715199</span> <span class="m">200278016</span> <span class="m">95</span>.5G <span class="m">83</span> Linux
+
+Command <span class="o">(</span>m <span class="k">for</span> <span class="nb">help</span><span class="o">)</span>: w <span class="c1">#最后按 w 保存分区表</span>
+The partition table has been altered.
+Syncing disks.
+</pre></div>
+<h1>3）打开虚拟机，使用 存储空间管理员 扩容即可</h1>
+<p>点 <code>管理</code>，按提示操作</p>
+<p><figure style="flex: 74.33628318584071" ><img width="1008" height="678" src="https://raw.githubusercontent.com/fejich/fejich.github.io/source/src/images/%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4%E7%AE%A1%E7%90%86%E5%91%98.png" /><figcaption>存储空间管理员</figcaption></figure></p>
+
+            </div>
+        </article>
+        <div id="ga-tags">
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/unRAID/">#unRAID</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/NAS/">#NAS</a>
+    </span>
+    
+</div>
+    </section>
+
+    
+<section id="ga-content_pager">
+
+    <div class="next">
+        <h3>没有了</h3>
+        <p class="yue">这是最新的文章</p>
+    </div>
+
+
+    <div class="prev">
+        <a class="ga-highlight" href="/archives/my-first-awesome-post/">我的第一篇文章</a>
+        <p class="yue">Hello World!</p>
+    </div>
+
+</section>
+
+
+    
+        <script>
+            var initValine = function () {
+                new Valine({"enable": true, "el": "#vcomments", "appId": "lslkachJjiWR2FD0NiAxSuHH-gzGzoHsz", "appKey": "8YljktyttMGfrlKNHCDV3DPF"});
+            }
+        </script>
+        <script defer src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js' onload="initValine()"></script>
+        <div id="vcomments"></div>
+    
+
+</main>
+
+                <footer class="ga-mono" id="ga-footer">
+                    <section>
+                        <span id="ga-uptime"></span>
+                        <span class="brand">瞎折腾分享</span>
+                    </section>
+                    <section>
+                        <p class="copyright">
+                            <span>Copyright © 2021 fejich</span>
+                            <span>Powered by <a no-style href="https://github.com/AlanDecode/Maverick" target="_blank">Maverick & Galileo</a></span>
+                        </p>
+                        <div class="copyright">
+                            <span class="footer-addon">
+                                
+                            </span>
+                            <nav class="social-links">
+                                <ul><li><a class="no-style" title="Twitter" href="https://twitter.com/AlanDecode" target="_blank"><i class="gi gi-twitter"></i>Twitter</a></li><span class="separator">·</span><li><a class="no-style" title="GitHub" href="https://github.com/AlanDecode" target="_blank"><i class="gi gi-github"></i>GitHub</a></li><span class="separator">·</span><li><a class="no-style" title="Weibo" href="https://weibo.com/5245109677/" target="_blank"><i class="gi gi-weibo"></i>Weibo</a></li></ul>
+                            </nav>
+                        </div>
+                    </section>
+                    <script>
+                        var site_build_date = "2019-12-18T16:51+08:00"
+                    </script>
+                    <script src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/assets/galileo-dc4baa7cf4.js"></script>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!--katex-->
+    <script defer src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/assets/katex.min.js"></script>
+    <script>
+    mathOpts = {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false}
+        ]
+    };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/assets/ExSearch/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
+
+    
+    </body>
+</html>

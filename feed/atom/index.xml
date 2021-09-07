@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><id>/</id><title>瞎折腾分享</title><updated>2021-09-07T07:14:24.984958+08:06</updated><author><name>fejich</name><email>hi@imalan.cn</email></author><link href="/" rel="alternate"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><logo>https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/logo.png</logo><subtitle>记录分享一些使用经验</subtitle><entry><id>/archives/typography/</id><title>Hello World!</title><updated>2021-09-07T07:14:24.985090+00:00</updated><author><name>AlanDecode</name><email>hi@imalan.cn</email><uri>https://github.com/fejich</uri></author><content>&lt;div class="notice"&gt;这是一篇示例文章，在这里你可以看到常用页面元素的显示效果，同时也是 Markdown 语法的参考文章。保留或者删除本文，开始自己的创作吧！&lt;/div&gt;&lt;h2&gt;L2 Heading&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><id>/</id><title>瞎折腾分享</title><updated>2021-09-07T07:27:19.296816+08:06</updated><author><name>fejich</name><email>hi@imalan.cn</email></author><link href="/" rel="alternate"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><logo>https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/logo.png</logo><subtitle>记录分享一些使用经验</subtitle><entry><id>/archives/typography/</id><title>Hello World!</title><updated>2021-09-07T07:27:19.296960+00:00</updated><author><name>AlanDecode</name><email>hi@imalan.cn</email><uri>https://github.com/fejich</uri></author><content>&lt;div class="notice"&gt;这是一篇示例文章，在这里你可以看到常用页面元素的显示效果，同时也是 Markdown 语法的参考文章。保留或者删除本文，开始自己的创作吧！&lt;/div&gt;&lt;h2&gt;L2 Heading&lt;/h2&gt;
 &lt;h3&gt;L3 Heading&lt;/h3&gt;
 &lt;h4&gt;L4 Heading&lt;/h4&gt;
 &lt;h5&gt;L5 Heading&lt;/h5&gt;
@@ -78,6 +78,77 @@
 &lt;/table&gt;
 &lt;h2&gt;Link Card&lt;/h2&gt;
 &lt;div class="links"&gt;
-&lt;a style="display:block" target="_blank" href="https://www.imalan.cn" class="board-item"&gt;                 &lt;div class="board-thumb"&gt;&lt;img src="https://secure.gravatar.com/avatar/1741a6eef5c824899e347e4afcbaa75d?s=200&amp;r=G&amp;d="&gt;&lt;/div&gt;                 &lt;div class="board-title"&gt;AlanDecode&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;hr&gt;&lt;div class="footnotes"&gt;&lt;ol&gt;&lt;li id="fn_1"&gt;Home page for AlanDecode &lt;a no-style href="#fn_ref_1"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;</content><link href="/archives/typography/" rel="alternate"/><published>2019-12-18T16:50:00+08:06</published></entry><entry><id>/archives/my-first-awesome-post/</id><title>我的第一篇文章</title><updated>2021-09-07T07:14:24.985024+00:00</updated><author><name>fejich</name><email>hi@imalan.cn</email><uri>https://github.com/fejich</uri></author><content>&lt;p&gt;这是我的第一篇文章。文章使用 GitHub 管理，并通过 GitHub Actions 自动构建与发布！&lt;/p&gt;
+&lt;a style="display:block" target="_blank" href="https://www.imalan.cn" class="board-item"&gt;                 &lt;div class="board-thumb"&gt;&lt;img src="https://secure.gravatar.com/avatar/1741a6eef5c824899e347e4afcbaa75d?s=200&amp;r=G&amp;d="&gt;&lt;/div&gt;                 &lt;div class="board-title"&gt;AlanDecode&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;hr&gt;&lt;div class="footnotes"&gt;&lt;ol&gt;&lt;li id="fn_1"&gt;Home page for AlanDecode &lt;a no-style href="#fn_ref_1"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;</content><link href="/archives/typography/" rel="alternate"/><published>2019-12-18T16:50:00+08:06</published></entry><entry><id>/archives/my-first-awesome-post/</id><title>我的第一篇文章</title><updated>2021-09-07T07:27:19.296930+00:00</updated><author><name>fejich</name><email>hi@imalan.cn</email><uri>https://github.com/fejich</uri></author><content>&lt;p&gt;这是我的第一篇文章。文章使用 GitHub 管理，并通过 GitHub Actions 自动构建与发布！&lt;/p&gt;
 &lt;p&gt;&lt;figure style="flex: 92.88888888888889" &gt;&lt;img width="836" height="450" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/e0affbc80ccb2d596c87b520e37e7071.jpg" /&gt;&lt;figcaption&gt;幽灵公主剧照&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
-</content><link href="/archives/my-first-awesome-post/" rel="alternate"/><published>2021-09-07T14:20:00+08:06</published></entry></feed>
+</content><link href="/archives/my-first-awesome-post/" rel="alternate"/><published>2021-09-07T14:20:00+08:06</published></entry><entry><id>/archives/qemu-img_resize/</id><title>unRAID 系统下虚拟机黑群辉硬盘无损扩容记录</title><updated>2021-09-07T07:27:19.296875+00:00</updated><author><name>fejich</name><email>hi@imalan.cn</email><uri>https://github.com/fejich</uri></author><content>&lt;h1&gt;0）测试环境&lt;/h1&gt;
+&lt;p&gt;黑群辉DSM 6.1.X，Basic 磁盘，btrfs 分区格式
+虚拟硬盘为 img 格式，原始容量 30G&lt;/p&gt;
+&lt;h1&gt;1）调整虚拟硬盘容量&lt;/h1&gt;
+&lt;p&gt;务必虚拟机关机情况下再操作&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;qemu-img resize 30G.img -- +70G&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;原本只分配了 30G 虚拟硬盘容量，后期不够用
+使用 qemu-img 命令给虚拟硬盘增加 70G 容量&lt;/p&gt;
+&lt;h1&gt;2）使用 fdisk 无损扩容&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;fdisk 30G.img&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;具体操作记录，注意看 #号后面的中文注解&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Welcome to fdisk &lt;span class="o"&gt;(&lt;/span&gt;util-linux &lt;span class="m"&gt;2&lt;/span&gt;.34&lt;span class="o"&gt;)&lt;/span&gt;.
+Changes will remain &lt;span class="k"&gt;in&lt;/span&gt; memory only, &lt;span class="k"&gt;until&lt;/span&gt; you decide to write them.
+Be careful before using the write command.
+
+
+Command &lt;span class="o"&gt;(&lt;/span&gt;m &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nb"&gt;help&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;: p &lt;span class="c1"&gt;#查看硬盘信息&lt;/span&gt;
+Disk vdisk2.img: &lt;span class="m"&gt;100&lt;/span&gt; GiB, &lt;span class="m"&gt;107374182400&lt;/span&gt; bytes, &lt;span class="m"&gt;209715200&lt;/span&gt; sectors
+Units: sectors of &lt;span class="m"&gt;1&lt;/span&gt; * &lt;span class="nv"&gt;512&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;512&lt;/span&gt; bytes
+Sector size &lt;span class="o"&gt;(&lt;/span&gt;logical/physical&lt;span class="o"&gt;)&lt;/span&gt;: &lt;span class="m"&gt;512&lt;/span&gt; bytes / &lt;span class="m"&gt;512&lt;/span&gt; bytes
+I/O size &lt;span class="o"&gt;(&lt;/span&gt;minimum/optimal&lt;span class="o"&gt;)&lt;/span&gt;: &lt;span class="m"&gt;512&lt;/span&gt; bytes / &lt;span class="m"&gt;512&lt;/span&gt; bytes
+Disklabel type: dos
+Disk identifier: 0xed294359
+
+Device      Boot   Start      End  Sectors  Size Id Type
+vdisk2.img1         &lt;span class="m"&gt;2048&lt;/span&gt;  &lt;span class="m"&gt;4982527&lt;/span&gt;  &lt;span class="m"&gt;4980480&lt;/span&gt;  &lt;span class="m"&gt;2&lt;/span&gt;.4G fd Linux raid autodetect
+vdisk2.img2      &lt;span class="m"&gt;4982528&lt;/span&gt;  &lt;span class="m"&gt;9176831&lt;/span&gt;  &lt;span class="m"&gt;4194304&lt;/span&gt;    2G fd Linux raid autodetect
+vdisk2.img3      &lt;span class="m"&gt;9437184&lt;/span&gt; &lt;span class="m"&gt;62709759&lt;/span&gt; &lt;span class="m"&gt;53272576&lt;/span&gt; &lt;span class="m"&gt;25&lt;/span&gt;.4G fd Linux raid autodetect  &lt;span class="c1"&gt;#记录下第三分区的开始位置 9437184，后边要用到&lt;/span&gt;
+
+Command &lt;span class="o"&gt;(&lt;/span&gt;m &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nb"&gt;help&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;: d &lt;span class="c1"&gt;#首先删掉分区&lt;/span&gt;
+Partition number &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;-3, default &lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;: 
+
+Partition &lt;span class="m"&gt;3&lt;/span&gt; has been deleted.
+
+Command &lt;span class="o"&gt;(&lt;/span&gt;m &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nb"&gt;help&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;: n &lt;span class="c1"&gt;#然后新建一个，按默认选主分区跟编号即可&lt;/span&gt;
+Partition &lt;span class="nb"&gt;type&lt;/span&gt;
+   p   primary &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt; primary, &lt;span class="m"&gt;0&lt;/span&gt; extended, &lt;span class="m"&gt;2&lt;/span&gt; free&lt;span class="o"&gt;)&lt;/span&gt;
+   e   extended &lt;span class="o"&gt;(&lt;/span&gt;container &lt;span class="k"&gt;for&lt;/span&gt; logical partitions&lt;span class="o"&gt;)&lt;/span&gt;
+Select &lt;span class="o"&gt;(&lt;/span&gt;default p&lt;span class="o"&gt;)&lt;/span&gt;: 
+
+Using default response p.
+Partition number &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;,4, default &lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;: 
+First sector &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;9176832&lt;/span&gt;-209715199, default &lt;span class="m"&gt;9177088&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;: &lt;span class="m"&gt;9437184&lt;/span&gt; &lt;span class="c1"&gt;#这里是无损扩容的关键，必须不能填错&lt;/span&gt;
+Last sector, +/-sectors or +/-size&lt;span class="o"&gt;{&lt;/span&gt;K,M,G,T,P&lt;span class="o"&gt;}&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;9437184&lt;/span&gt;-209715199, default &lt;span class="m"&gt;209715199&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;: 
+
+Created a new partition &lt;span class="m"&gt;3&lt;/span&gt; of &lt;span class="nb"&gt;type&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Linux&amp;#39;&lt;/span&gt; and of size &lt;span class="m"&gt;95&lt;/span&gt;.5 GiB.
+Partition &lt;span class="c1"&gt;#3 contains a linux_raid_member signature.&lt;/span&gt;
+
+Do you want to remove the signature? &lt;span class="o"&gt;[&lt;/span&gt;Y&lt;span class="o"&gt;]&lt;/span&gt;es/&lt;span class="o"&gt;[&lt;/span&gt;N&lt;span class="o"&gt;]&lt;/span&gt;o: n &lt;span class="c1"&gt;# 必须选 N ，不要移除签名&lt;/span&gt;
+
+Command &lt;span class="o"&gt;(&lt;/span&gt;m &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nb"&gt;help&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;: p &lt;span class="c1"&gt;#再次查看信息已经看到分区是扩容状态&lt;/span&gt;
+
+Disk vdisk2.img: &lt;span class="m"&gt;100&lt;/span&gt; GiB, &lt;span class="m"&gt;107374182400&lt;/span&gt; bytes, &lt;span class="m"&gt;209715200&lt;/span&gt; sectors
+Units: sectors of &lt;span class="m"&gt;1&lt;/span&gt; * &lt;span class="nv"&gt;512&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;512&lt;/span&gt; bytes
+Sector size &lt;span class="o"&gt;(&lt;/span&gt;logical/physical&lt;span class="o"&gt;)&lt;/span&gt;: &lt;span class="m"&gt;512&lt;/span&gt; bytes / &lt;span class="m"&gt;512&lt;/span&gt; bytes
+I/O size &lt;span class="o"&gt;(&lt;/span&gt;minimum/optimal&lt;span class="o"&gt;)&lt;/span&gt;: &lt;span class="m"&gt;512&lt;/span&gt; bytes / &lt;span class="m"&gt;512&lt;/span&gt; bytes
+Disklabel type: dos
+Disk identifier: 0xed294359
+
+Device      Boot   Start       End   Sectors  Size Id Type
+vdisk2.img1         &lt;span class="m"&gt;2048&lt;/span&gt;   &lt;span class="m"&gt;4982527&lt;/span&gt;   &lt;span class="m"&gt;4980480&lt;/span&gt;  &lt;span class="m"&gt;2&lt;/span&gt;.4G fd Linux raid autodetect
+vdisk2.img2      &lt;span class="m"&gt;4982528&lt;/span&gt;   &lt;span class="m"&gt;9176831&lt;/span&gt;   &lt;span class="m"&gt;4194304&lt;/span&gt;    2G fd Linux raid autodetect
+vdisk2.img3      &lt;span class="m"&gt;9437184&lt;/span&gt; &lt;span class="m"&gt;209715199&lt;/span&gt; &lt;span class="m"&gt;200278016&lt;/span&gt; &lt;span class="m"&gt;95&lt;/span&gt;.5G &lt;span class="m"&gt;83&lt;/span&gt; Linux
+
+Command &lt;span class="o"&gt;(&lt;/span&gt;m &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nb"&gt;help&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;: w &lt;span class="c1"&gt;#最后按 w 保存分区表&lt;/span&gt;
+The partition table has been altered.
+Syncing disks.
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;3）打开虚拟机，使用 存储空间管理员 扩容即可&lt;/h1&gt;
+&lt;p&gt;点 &lt;code&gt;管理&lt;/code&gt;，按提示操作&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 74.33628318584071" &gt;&lt;img width="1008" height="678" src="https://raw.githubusercontent.com/fejich/fejich.github.io/source/src/images/%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4%E7%AE%A1%E7%90%86%E5%91%98.png" /&gt;&lt;figcaption&gt;存储空间管理员&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+</content><link href="/archives/qemu-img_resize/" rel="alternate"/><published>2021-09-07T15:20:00+08:06</published></entry></feed>
