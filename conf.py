@@ -84,3 +84,11 @@ head_addon = r'''
 footer_addon = ''
 
 body_addon = ''
+
+#评论系统
+valine = {
+    "enable": True,
+    "el": '#vcomments',
+    "appId": "lslkachJjiWR2FD0NiAxSuHH-gzGzoHsz",
+    "appKey": "8YljktyttMGfrlKNHCDV3DPF",
+}
