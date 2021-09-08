@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>瞎折腾分享</title><link>/</link><description>记录分享一些个人日常</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/logo.png</url><title>瞎折腾分享</title><link>/</link></image><language>zh-CN</language><lastBuildDate>Wed, 08 Sep 2021 03:48:19 +0806</lastBuildDate><pubDate>Wed, 08 Sep 2021 03:48:19 +0806</pubDate><item><title>我的第一篇文章</title><link>/archives/my-first-awesome-post/</link><description>&lt;p&gt;这是我的第一篇文章。文章使用 GitHub 管理，并通过 GitHub Actions 自动构建与发布！&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>瞎折腾分享</title><link>/</link><description>记录分享一些个人日常</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/logo.png</url><title>瞎折腾分享</title><link>/</link></image><language>zh-CN</language><lastBuildDate>Wed, 08 Sep 2021 05:42:21 +0806</lastBuildDate><pubDate>Wed, 08 Sep 2021 05:42:21 +0806</pubDate><item><title>我的第一篇文章</title><link>/archives/my-first-awesome-post/</link><description>&lt;p&gt;这是我的第一篇文章。文章使用 GitHub 管理，并通过 GitHub Actions 自动构建与发布！&lt;/p&gt;
 &lt;p&gt;&lt;figure&gt;&lt;img data-width="836" data-height="450" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/e0affbc80ccb2d596c87b520e37e7071.jpg" alt="幽灵公主剧照" /&gt;&lt;figcaption&gt;幽灵公主剧照&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 </description><author>hi@imalan.cn (fejich)</author><guid isPermaLink="true">/archives/my-first-awesome-post/</guid><pubDate>Tue, 07 Sep 2021 14:20:00 +0806</pubDate></item><item><title>unRAID 系统下虚拟机黑群辉硬盘无损扩容记录</title><link>/archives/qemu-img_resize/</link><description>&lt;h1&gt;0）测试环境&lt;/h1&gt;
 &lt;p&gt;黑群辉DSM 6.1.X，Basic 磁盘，btrfs 分区格式
@@ -177,4 +177,16 @@ alias rcp="rsync -ah --info=progress2 --no-i-r"&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;code&gt;2 0 * * *&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;每日凌晨零点02分&lt;/p&gt;
 &lt;/blockquote&gt;
-</description><author>hi@imalan.cn (fejich)</author><guid isPermaLink="true">/archives/bing-wallpaper/</guid><pubDate>Wed, 08 Sep 2021 11:10:00 +0806</pubDate></item></channel></rss>
+</description><author>hi@imalan.cn (fejich)</author><guid isPermaLink="true">/archives/bing-wallpaper/</guid><pubDate>Wed, 08 Sep 2021 11:10:00 +0806</pubDate></item><item><title>群辉反代虚拟机套件noVNC窗口提示“无法连线到伺服器”的解决方法</title><link>/archives/Synology_reverse_proxy/</link><description>&lt;h1&gt;问题情况&lt;/h1&gt;
+&lt;p&gt;群晖 &lt;code&gt;DSM 6.2.1&lt;/code&gt;以上版本，在使用   反向代理用域名访问&lt;code&gt;虚拟机（Virtual Machine）&lt;/code&gt;时标题为 noVNC 的网页 提示&lt;code&gt;“无法连线到伺服器”（Failed to connect to server）&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;看过之前大神的帖子让改 Portal.mustache 文件，但是在 DSM 6.2.1 及以上版本中这种改法不但不起作用，还会让 DSM 无法启动，请大家一定要注意。&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img data-width="1664" data-height="906" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/e2ffc7664fa5c1078b10b2f6745206f0.png" alt="出错的页面" /&gt;&lt;figcaption&gt;出错的页面&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1&gt;解决办法&lt;/h1&gt;
+&lt;p&gt;在 控制面板-应用程序门户-反向代理服务器 中选中要访问虚拟机的那条反向代理， 编辑-“自定义标题”选项卡-“新增”的下拉箭头-WebSocket，然后随便点一下新添加的 “Upgrade”或者“Connection”标签名称，确定保存即可。每个需要访问虚拟机的反代域名都要设置一遍才行。&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img data-width="485" data-height="254" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/869cbf41a8286380fe849888f75dccfe.png" alt="反向代理服务器" /&gt;&lt;figcaption&gt;反向代理服务器&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1&gt;转载整理自&lt;/h1&gt;
+&lt;p&gt;[&lt;a href="http://www.nasyun.com/thread-70881-1-1.html"&gt;解决使用反向代理域名访问群晖虚拟机时提示noVNC“无法连线到伺服器”的问题&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;作者：&lt;code&gt;shenhaiyu&lt;/code&gt; 于 2020-5-17 20:15 编辑&lt;/li&gt;
+&lt;/ul&gt;
+</description><author>hi@imalan.cn (fejich)</author><guid isPermaLink="true">/archives/Synology_reverse_proxy/</guid><pubDate>Wed, 08 Sep 2021 13:20:00 +0806</pubDate></item></channel></rss>

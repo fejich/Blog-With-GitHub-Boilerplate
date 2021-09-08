@@ -32,20 +32,19 @@
         });
     </script>
     
-<title>SSH免密登录OpenWRT路由器并执行命令 - 瞎折腾分享</title>
+<title>Tag: Synology - 瞎折腾分享</title>
 <meta name="author" content="fejich" />
-<meta name="description" content="Dropbear" />
-<meta property="og:title" content="SSH免密登录OpenWRT路由器并执行命令 - 瞎折腾分享" />
-<meta property="og:description" content="Dropbear" />
+<meta name="description" content="记录分享一些个人日常" />
+<meta property="og:title" content="Tag: Synology - 瞎折腾分享" />
+<meta property="og:description" content="记录分享一些个人日常" />
 <meta property="og:site_name" content="瞎折腾分享" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/archives/ssh_autologin/" />
-<meta property="og:image" content="" />
-<meta property="article:published_time" content="2021-09-07T19:30:00-00.00" />
-<meta name="twitter:title" content="SSH免密登录OpenWRT路由器并执行命令 - 瞎折腾分享" />
-<meta name="twitter:description" content="Dropbear" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/tag/Synology/" />
+<meta property="og:image" content="瞎折腾分享" />
+<meta name="twitter:title" content="Tag: Synology - 瞎折腾分享" />
+<meta name="twitter:description" content="记录分享一些个人日常" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:image" content="" />
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/logo.png" />
 
 
     
@@ -54,7 +53,7 @@
 
     </head>
     
-    <body class="content">
+    <body class="archive">
         <header>
             <div class="container">
                 <section>
@@ -94,7 +93,7 @@
                     
                     <section>
                         
-    <div class="open "><span><a href="/category/默认分类/">默认分类</a><button class="toggle_sidebar fa"></button></span><ul><li class=""><a href="/archives/Synology_reverse_proxy/">群辉反代虚拟机套件noVNC窗口提示“无法连线到伺服器”的解决方法</a></li><li class=""><a href="/archives/bing-wallpaper/">unRAID 系统下定时运行脚本获取 bing每日壁纸</a></li><li class="current"><a href="/archives/ssh_autologin/">SSH免密登录OpenWRT路由器并执行命令</a></li><li class=""><a href="/archives/rsync/">Linux系统下使用 rsync 代替 cp</a></li><li class=""><a href="/archives/qemu-img_resize/">unRAID 系统下虚拟机黑群辉硬盘无损扩容记录</a></li><li class=""><a href="/archives/my-first-awesome-post/">我的第一篇文章</a></li></ul></div>
+    <div class=" "><span><a href="/category/默认分类/">默认分类</a><button class="toggle_sidebar fa"></button></span><ul><li class=""><a href="/archives/Synology_reverse_proxy/">群辉反代虚拟机套件noVNC窗口提示“无法连线到伺服器”的解决方法</a></li><li class=""><a href="/archives/bing-wallpaper/">unRAID 系统下定时运行脚本获取 bing每日壁纸</a></li><li class=""><a href="/archives/ssh_autologin/">SSH免密登录OpenWRT路由器并执行命令</a></li><li class=""><a href="/archives/rsync/">Linux系统下使用 rsync 代替 cp</a></li><li class=""><a href="/archives/qemu-img_resize/">unRAID 系统下虚拟机黑群辉硬盘无损扩容记录</a></li><li class=""><a href="/archives/my-first-awesome-post/">我的第一篇文章</a></li></ul></div>
 
                     </section>
                     <section hidden class="sidebar-external-link">
@@ -108,96 +107,38 @@
                 </aside>
                 <div id="content-wrapper">
                     <div id="content">
+
     <section>
-        <h1 class="post-title">SSH免密登录OpenWRT路由器并执行命令</h1>
-        <p class="post-meta">
-            <time>September 07 2021</time>
-            <span class="tags">
+        <h1 class="page-title">TAG: #Synology</h1>
+        <div id="content-list">
+            
+            <section class="card-list">
                 
-                <span>
-                    <a href="/tag/Linux/">#Linux</a>
-                </span>
+                    <a class="card" href="/archives/Synology_reverse_proxy/">
+                        <time>September 08 2021</time>
+                        <span>群辉反代虚拟机套件noVNC窗口提示“无法连线到伺服器”的解决方法</span>
+                    </a>
                 
-                <span>
-                    <a href="/tag/OpenWRT/">#OpenWRT</a>
-                </span>
-                
-            </span>
-        </p>
-        <article class="yue"><p><figure><img data-width="1638" data-height="954" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/d47543604f898de987b2d094b08a6a9b.png" alt="Dropbear" /><figcaption>Dropbear</figcaption></figure></p>
-<h1>前言</h1>
-<p><code>Dropbear</code>是一款基于ssh协议的轻量sshd服务器，与OpenSSH相比，他更简洁，更小巧，运行起来占用的内存也更少。</p>
-<p>每一个普通用户登录，OpenSSH会开两个sshd进程，而dropbear只开一个进程，所以其对硬件要求更低，也更利于系统的运行。</p>
-<p>Dropbear常用于“嵌入”式的Linux（或其他Unix）系统，OpenWRT 路由系统就是其中之一</p>
-<h1>配置 ssh 密钥</h1>
-<p><code>ssh-keygen -t rsa</code></p>
-<blockquote><p>连续三次回车,即在本地主机上生成了公钥和私钥,不设置密码</p>
-</blockquote>
-<p><code>cat ~/.ssh/id_rsa.pub | ssh -p 1022 root@192.168.168.1 'cat &gt;&gt; /etc/dropbear/authorized_keys'</code></p>
-<blockquote><p>将本地密钥写入到路由信任列表内</p>
-</blockquote>
-<h1>测试免密登录路由器并执行命令</h1>
-<p><code>ssh -p 1022 root@192.168.168.1 "touch /root/test ; ls"</code></p>
-<h1>配置 crontab 定时执行命令</h1>
-<p><code>crontab -e</code></p>
-<div class="highlight"><pre><span></span><span class="c1">#凌晨4点重启路由+5点进行时间同步</span>
-<span class="m">0</span> <span class="m">4</span> * * * ssh -p <span class="m">1022</span> root@192.168.168.1 <span class="s2">&quot;reboot&quot;</span>
-<span class="m">0</span> <span class="m">5</span> * * * ssh -p <span class="m">1022</span> root@192.168.168.1 <span class="s2">&quot;ntpd -n -q -p ntp.aliyun.com&quot;</span>
-</pre></div>
-<h1>参考</h1>
-<p><a href="https://www.jqhtml.com/61355.html">https://www.jqhtml.com/61355.html</a></p>
-</article>
+            </section>
+        </div>
     </section>
 
-    
-    <section id="content-pager">
-        
-            <div class="next">
-                <a class="card" href="/archives/bing-wallpaper/">
-                    <time>September 08 2021</time>
-                    <span>unRAID 系统下定时运行脚本获取 bing每日壁纸</span>
-                </a>
-            </div>
-        
-        
-            <div class="prev">
-                <a class="card" href="/archives/rsync/">
-                    <time>September 07 2021</time>
-                    <span>Linux系统下使用 rsync 代替 cp</span>
-                </a>
-            </div>
-        
-    </section>
-    
-
-    
-        <section id="comments">
-            <div id="vcomments"></div>
-        </section>
-        <script>
-            window.ValineOpt = {"enable": true, "el": "#vcomments", "appId": "lslkachJjiWR2FD0NiAxSuHH-gzGzoHsz", "appKey": "8YljktyttMGfrlKNHCDV3DPF"};
-            window.ValineOpt.path = window.location.pathname;
-        </script>
     
 
     <script>
-        document.body.classList.add('content');
-        document.body.classList.remove('archive');
+        document.body.classList.add('archive');
+        document.body.classList.remove('content');
     </script>
+
 </div>
                     <footer>
                         <span>Copyright © 2021 fejich</span>
                         
-    
-
                         
                     </footer>
                 </div>
                 
-<aside id="toc-container" class="no-scrollbar">
-    <span><i class="fa fa-align-right"></i> CONTENTS</span>
-    <div id="toc"></div>
-</aside>
+<aside id="toc-container" class="no-scrollbar no-bg"></aside>
 
             </div>
         </main>
