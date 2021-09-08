@@ -1,107 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
+<?xml version="1.0" encoding="utf-8"?>
+<urlset 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	
 
 <url>
-  <loc>https://fejich.github.io/</loc>
-  <lastmod>2021-09-08T06:12:21+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://fejich.github.io/archives/</loc>
-  <lastmod>2021-09-08T06:12:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://fejich.github.io/about/</loc>
-  <lastmod>2021-09-08T06:12:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://fejich.github.io/category/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/</loc>
-  <lastmod>2021-09-08T06:12:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://fejich.github.io/archives/Synology_reverse_proxy/</loc>
-  <lastmod>2021-09-08T06:12:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://fejich.github.io/archives/bing-wallpaper/</loc>
-  <lastmod>2021-09-08T06:12:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://fejich.github.io/archives/ssh_autologin/</loc>
-  <lastmod>2021-09-08T06:12:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://fejich.github.io/archives/rsync/</loc>
-  <lastmod>2021-09-08T06:12:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://fejich.github.io/archives/qemu-img_resize/</loc>
-  <lastmod>2021-09-08T06:12:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://fejich.github.io/archives/my-first-awesome-post/</loc>
-  <lastmod>2021-09-08T06:12:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://fejich.github.io/tag/Synology/</loc>
-  <lastmod>2021-09-08T06:12:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://fejich.github.io/tag/NAS/</loc>
-  <lastmod>2021-09-08T06:12:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://fejich.github.io/tag/unRAID/</loc>
-  <lastmod>2021-09-08T06:12:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://fejich.github.io/tag/Python/</loc>
-  <lastmod>2021-09-08T06:12:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://fejich.github.io/tag/Linux/</loc>
-  <lastmod>2021-09-08T06:12:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://fejich.github.io/tag/OpenWRT/</loc>
-  <lastmod>2021-09-08T06:12:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://fejich.github.io/tag/%E5%8D%9A%E5%AE%A2/</loc>
-  <lastmod>2021-09-08T06:12:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://fejich.github.io/tag/Maverick/</loc>
-  <lastmod>2021-09-08T06:12:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://fejich.github.io/tag/GitHub/</loc>
-  <lastmod>2021-09-08T06:12:21+00:00</lastmod>
-  <priority>0.64</priority>
+    <loc>/about/</loc>
+    <lastmod>2021-09-08</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.8</priority>
 </url>
 
+<url>
+    <loc>/archives/Export_subtitles/</loc>
+    <lastmod>2021-09-08</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/Synology_reverse_proxy/</loc>
+    <lastmod>2021-09-08</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/bing-wallpaper/</loc>
+    <lastmod>2021-09-08</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/ssh_autologin/</loc>
+    <lastmod>2021-09-07</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/rsync/</loc>
+    <lastmod>2021-09-07</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/qemu-img_resize/</loc>
+    <lastmod>2021-09-07</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/my-first-awesome-post/</loc>
+    <lastmod>2021-09-07</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
 
 </urlset>
