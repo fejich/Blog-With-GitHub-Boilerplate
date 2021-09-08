@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [转载]群辉反代_虚拟机套件noVNC窗口提示“无法连线到伺服器”的解决方法
+title: 群辉反代虚拟机套件noVNC窗口提示“无法连线到伺服器”的解决方法
 slug: Synology_reverse_proxy
 date: 2021-09-08 13:20
 status: publish
