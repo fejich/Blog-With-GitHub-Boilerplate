@@ -38,6 +38,6 @@ excerpt: 群辉使用 Nginx 作为反代，默认没有开启 WebSocket 的反�
 
 # 转载整理自
 
-[[解决使用反向代理域名访问群晖虚拟机时提示noVNC“无法连线到伺服器”的问题](http://www.nasyun.com/thread-70881-1-1.html)
+[解决使用反向代理域名访问群晖虚拟机时提示noVNC“无法连线到伺服器”的问题](http://www.nasyun.com/thread-70881-1-1.html)
 
 + 作者：`shenhaiyu` 于 2020-5-17 20:15 编辑
