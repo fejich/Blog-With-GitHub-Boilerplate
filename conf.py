@@ -27,7 +27,7 @@ site_build_date = "2019-12-18T16:51+08:00"
 author = "fejich"
 email = "hi@imalan.cn"
 author_homepage = "https://github.com/fejich"
-description = "记录分享一些使用经验"
+description = "记录分享一些个人日常"
 key_words = ['Maverick', 'GitHub', 'Share', 'blog']
 language = 'zh-CN'
 external_links = [
@@ -53,11 +53,11 @@ nav = [
         "url": "${site_prefix}archives/",
         "target": "_self"
     }
-#    {
-#        "name": "关于",
-#        "url": "${site_prefix}about/",
-#        "target": "_self"
-#    }
+    {
+        "name": "关于",
+        "url": "${site_prefix}about/",
+        "target": "_self"
+    }
 ]
 
 social_links = [
