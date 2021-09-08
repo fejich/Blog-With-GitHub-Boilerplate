@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>瞎折腾分享</title><link>/</link><description>记录分享一些个人日常</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/logo.png</url><title>瞎折腾分享</title><link>/</link></image><language>zh-CN</language><lastBuildDate>Wed, 08 Sep 2021 01:33:29 +0806</lastBuildDate><pubDate>Wed, 08 Sep 2021 01:33:29 +0806</pubDate><item><title>我的第一篇文章</title><link>/archives/my-first-awesome-post/</link><description>&lt;p&gt;这是我的第一篇文章。文章使用 GitHub 管理，并通过 GitHub Actions 自动构建与发布！&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>瞎折腾分享</title><link>/</link><description>记录分享一些个人日常</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/logo.png</url><title>瞎折腾分享</title><link>/</link></image><language>zh-CN</language><lastBuildDate>Wed, 08 Sep 2021 03:48:19 +0806</lastBuildDate><pubDate>Wed, 08 Sep 2021 03:48:19 +0806</pubDate><item><title>我的第一篇文章</title><link>/archives/my-first-awesome-post/</link><description>&lt;p&gt;这是我的第一篇文章。文章使用 GitHub 管理，并通过 GitHub Actions 自动构建与发布！&lt;/p&gt;
 &lt;p&gt;&lt;figure&gt;&lt;img data-width="836" data-height="450" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/e0affbc80ccb2d596c87b520e37e7071.jpg" alt="幽灵公主剧照" /&gt;&lt;figcaption&gt;幽灵公主剧照&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 </description><author>hi@imalan.cn (fejich)</author><guid isPermaLink="true">/archives/my-first-awesome-post/</guid><pubDate>Tue, 07 Sep 2021 14:20:00 +0806</pubDate></item><item><title>unRAID 系统下虚拟机黑群辉硬盘无损扩容记录</title><link>/archives/qemu-img_resize/</link><description>&lt;h1&gt;0）测试环境&lt;/h1&gt;
 &lt;p&gt;黑群辉DSM 6.1.X，Basic 磁盘，btrfs 分区格式
@@ -123,4 +123,58 @@ alias rcp="rsync -ah --info=progress2 --no-i-r"&lt;/code&gt;&lt;/pre&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h1&gt;参考&lt;/h1&gt;
 &lt;p&gt;&lt;a href="https://www.jqhtml.com/61355.html"&gt;https://www.jqhtml.com/61355.html&lt;/a&gt;&lt;/p&gt;
-</description><author>hi@imalan.cn (fejich)</author><guid isPermaLink="true">/archives/ssh_autologin/</guid><pubDate>Tue, 07 Sep 2021 19:30:00 +0806</pubDate></item></channel></rss>
+</description><author>hi@imalan.cn (fejich)</author><guid isPermaLink="true">/archives/ssh_autologin/</guid><pubDate>Tue, 07 Sep 2021 19:30:00 +0806</pubDate></item><item><title>unRAID 系统下定时运行脚本获取 bing每日壁纸</title><link>/archives/bing-wallpaper/</link><description>&lt;h1&gt;前言&lt;/h1&gt;
+&lt;p&gt;最近 Fork 了一个使用  GitHub Action 自动抓取bing壁纸的项目&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/yfun-lab/bing-wallpaper"&gt;https://github.com/yfun-lab/bing-wallpaper&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;感觉项目的Python脚本写得十分优雅，按个人的习惯简单修改了脚本部署到自己的 GitHub 上。&lt;/p&gt;
+&lt;p&gt;同时顺手在本地 NAS 上也跑一个，供日常观赏。&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img data-width="668" data-height="328" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/b51e284aa107c090f56acfd226580611.png" alt="成果" /&gt;&lt;figcaption&gt;成果&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1&gt;1）安装所需的运行环境&lt;/h1&gt;
+&lt;p&gt;首先于 unRAID  &lt;code&gt;Community Applications&lt;/code&gt; 安装 &lt;strong&gt;Nerd Tools&lt;/strong&gt; 和 &lt;strong&gt;User Scripts&lt;/strong&gt; 两个插件&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img data-width="995" data-height="228" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/c9225c395a4f72b10d3708bace75aaee.png" alt="需要的插件" /&gt;&lt;figcaption&gt;需要的插件&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后打开 &lt;strong&gt;Nerd Tools&lt;/strong&gt; 安装 &lt;code&gt;Python3&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img data-width="1366" data-height="193" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/bc133e3ee7afa5b47843f3b1ace27067.png" alt="安装Python3" /&gt;&lt;figcaption&gt;安装Python3&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;至此所需的运行环境就部署完成了&lt;/p&gt;
+&lt;h1&gt;2）运行脚本&lt;/h1&gt;
+&lt;p&gt;保存为 &lt;code&gt;main.py&lt;/code&gt; ，同时于同目录建一个 &lt;code&gt;Wallpaper&lt;/code&gt; 文件夹用于存放下载来的文件&lt;/p&gt;
+&lt;p&gt;在终端使用 &lt;code&gt;python3 main.py&lt;/code&gt; 测试脚本是否正常运作&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib.request&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;req&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;json&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;re&lt;/span&gt;
+
+
+&lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;http://cn.bing.com/HPImageArchive.aspx?format=js&amp;amp;idx=0&amp;amp;n=1&amp;amp;nc=1614319565639&amp;amp;pid=hp&amp;amp;FORM=BEHPTB&amp;amp;uhd=1&amp;amp;uhdwidth=3840&amp;amp;uhdheight=2160&amp;#39;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# try:&lt;/span&gt;
+&lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlopen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;res&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;decode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;utf-8&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;api&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loads&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;res&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;api&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;api&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;images&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;downloadURL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;https://bing.com&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;api&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;url&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;dateTime&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;api&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;enddate&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;copyright&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;api&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;copyright&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# 获取版权信息&lt;/span&gt;
+&lt;span class="n"&gt;rstr&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;[\/&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;\:\*\?\&amp;quot;\&amp;lt;\&amp;gt;\|]&amp;#39;&lt;/span&gt;  &lt;span class="c1"&gt;# &amp;#39;/ \ : * ? &amp;quot; &amp;lt; &amp;gt; |&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;new_copyright&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rstr&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;_&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;copyright&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# 替换为下划线&lt;/span&gt;
+
+&lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlretrieve&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;downloadURL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;./Wallpaper/&lt;/span&gt;&lt;span class="si"&gt;{0}{1}{2}&lt;/span&gt;&lt;span class="s2"&gt;.jpg&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dateTime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;@&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;new_copyright&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;urlretrieve&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;./Wallpaper/&lt;/span&gt;&lt;span class="si"&gt;{}&lt;/span&gt;&lt;span class="s2"&gt;.json&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dateTime&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="c1"&gt;# except:&lt;/span&gt;
+&lt;span class="c1"&gt;#     print(&amp;quot;Error.&amp;quot;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;&lt;p&gt;于原项目基础上修改了图片保存的目录与文件名（按 日期@版权信息 命名）&lt;/p&gt;
+&lt;p&gt;增加保存当日完整的 json 信息到本地，以供日后可能有用得上的时候&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;3）配置定时执行&lt;/h1&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img data-width="1245" data-height="75" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/d5c12e80a39b44a801d8bc14d6797c8b.png" alt="Userscrips" /&gt;&lt;figcaption&gt;Userscrips&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;到 &lt;strong&gt;User Scripts&lt;/strong&gt; 插件内添加一个新脚本，内容按实际情况编辑&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; /mnt/disk1/appdata/bing/ &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; python3 main.py
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;最后设置 &lt;a href="https://corntab.com/"&gt;Cron&lt;/a&gt; 计划任务定时运行&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;2 0 * * *&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;每日凌晨零点02分&lt;/p&gt;
+&lt;/blockquote&gt;
+</description><author>hi@imalan.cn (fejich)</author><guid isPermaLink="true">/archives/bing-wallpaper/</guid><pubDate>Wed, 08 Sep 2021 11:10:00 +0806</pubDate></item></channel></rss>
