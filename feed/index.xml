@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>瞎折腾分享</title><link>/</link><description>记录分享一些个人日常</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/logo.png</url><title>瞎折腾分享</title><link>/</link></image><language>zh-CN</language><lastBuildDate>Thu, 09 Sep 2021 09:11:15 +0806</lastBuildDate><pubDate>Thu, 09 Sep 2021 09:11:15 +0806</pubDate><item><title>我的第一篇文章</title><link>/archives/my-first-awesome-post/</link><description>&lt;p&gt;这是我的第一篇文章。文章使用 GitHub 管理，并通过 GitHub Actions 自动构建与发布！&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>瞎折腾分享</title><link>/</link><description>记录分享一些个人日常</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/logo.png</url><title>瞎折腾分享</title><link>/</link></image><language>zh-CN</language><lastBuildDate>Thu, 09 Sep 2021 09:17:00 +0806</lastBuildDate><pubDate>Thu, 09 Sep 2021 09:17:00 +0806</pubDate><item><title>我的第一篇文章</title><link>/archives/my-first-awesome-post/</link><description>&lt;p&gt;这是我的第一篇文章。文章使用 GitHub 管理，并通过 GitHub Actions 自动构建与发布！&lt;/p&gt;
 &lt;p&gt;&lt;figure&gt;&lt;img data-width="836" data-height="450" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/e0affbc80ccb2d596c87b520e37e7071.jpg" alt="幽灵公主剧照" /&gt;&lt;figcaption&gt;幽灵公主剧照&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 </description><author>hi@imalan.cn (fejich)</author><guid isPermaLink="true">/archives/my-first-awesome-post/</guid><pubDate>Tue, 07 Sep 2021 14:20:00 +0806</pubDate></item><item><title>unRAID 系统下虚拟机黑群辉硬盘无损扩容记录</title><link>/archives/qemu-img_resize/</link><description>&lt;h1&gt;0）测试环境&lt;/h1&gt;
 &lt;p&gt;黑群辉DSM 6.1.X，Basic 磁盘，btrfs 分区格式
@@ -239,7 +239,7 @@ alias rcp="rsync -ah --info=progress2 --no-i-r"&lt;/code&gt;&lt;/pre&gt;
 &lt;/ul&gt;
 &lt;p&gt;挑来选去最终是买了 &lt;strong&gt;IN WIN 迎广MS04 NAS机箱&lt;/strong&gt;。选这款最大的原因是其可拉出的主板托盘设计，这个为安装调试与日后维护提供了便利。&lt;/p&gt;
 &lt;p&gt;整体做工与颜值也符合我的要求，详细优点开箱网上已经有很多这里就不再重复了。&lt;/p&gt;
-&lt;p&gt;&lt;figure&gt;&lt;img data-width="1921" data-height="1281" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/c8463428c9bc4e7baaaa900e713cca56.png" alt="4" /&gt;&lt;figcaption&gt;4&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img data-width="1921" data-height="1281" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/c8463428c9bc4e7baaaa900e713cca56.png" alt="主板托盘" /&gt;&lt;figcaption&gt;主板托盘&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;h1&gt;装机&lt;/h1&gt;
 &lt;p&gt;淘宝选一家销量最高的授权代理商下单，全新机箱+原装电源 顺丰包邮 &lt;strong&gt;总价：869&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;2天时间顺丰小哥横跨大半个中国把机箱送到我手上，拿到后第一时间开箱检查却是发现翻了车 :joy:&lt;/p&gt;
@@ -254,5 +254,5 @@ alias rcp="rsync -ah --info=progress2 --no-i-r"&lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 &lt;h1&gt;最后记念下旧机箱&lt;/h1&gt;
 &lt;p&gt;相册里边翻出 2015.05.13 号拍的万由4盘位NAS整机开箱，即使从今天来看这个做工跟设计都是很给力的。希望万由日后能设计出更出色的NAS机箱，让消费者可以有更多靠谱的NAS机箱选择。&lt;/p&gt;
-&lt;p&gt;&lt;figure&gt;&lt;img data-width="3074" data-height="1386" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/17f30efb0dfdd0ff8e4bc13bcbaf6b8b.png" alt="截屏2021-09-09 00.13.56" /&gt;&lt;figcaption&gt;截屏2021-09-09 00.13.56&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img data-width="3074" data-height="1386" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/17f30efb0dfdd0ff8e4bc13bcbaf6b8b.png" alt="截屏2021-09-09" /&gt;&lt;figcaption&gt;截屏2021-09-09&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 </description><author>hi@imalan.cn (fejich)</author><guid isPermaLink="true">/archives/IW-MS04/</guid><pubDate>Thu, 09 Sep 2021 17:00:00 +0806</pubDate></item></channel></rss>
