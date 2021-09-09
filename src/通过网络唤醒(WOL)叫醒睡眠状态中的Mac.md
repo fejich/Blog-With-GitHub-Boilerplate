@@ -14,7 +14,7 @@ tags:
 excerpt: 通过意想不到的方法实现 Mac 的 WOL 唤醒
 ---
 
-<img src="通过网络唤醒(WOL)叫醒睡眠状态中的Mac.assets/WOL.png" alt="WOL" style="zoom:50%;" />
+![WOL](通过网络唤醒(WOL)叫醒睡眠状态中的Mac.assets/WOL.png)
 
 ## WOL 是什么
 
@@ -72,11 +72,15 @@ ssh {MacUserName}@{MacIP} 'caffeinate -u -t 1'
 
 #### [可选]配置 ssh 免密码登陆 Mac
 
-`ssh-keygen -t rsa`
+```shell
+ssh-keygen -t rsa
+```
 
 >连续三次回车,即在本地主机上生成了公钥和私钥,不设置密码
 
-`cat ~/.ssh/id_rsa.pub | ssh {MacUserName}@{MacIP} 'mkdir .ssh ;cat >> .ssh/authorized_keys'`
+```shell
+cat ~/.ssh/id_rsa.pub | ssh {MacUserName}@{MacIP} 'mkdir .ssh ;cat >> .ssh/authorized_keys'
+```
 
 >将本地密钥写入到 Mac 主机信任列表内
 
