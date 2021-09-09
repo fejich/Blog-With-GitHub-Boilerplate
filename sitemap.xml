@@ -12,6 +12,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+    <loc>/archives/waking-up-a-mac-with-wake-on-lan/</loc>
+    <lastmod>2021-09-10</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
     <loc>/archives/IW-MS04/</loc>
     <lastmod>2021-09-09</lastmod>
     <changefreq>always</changefreq>

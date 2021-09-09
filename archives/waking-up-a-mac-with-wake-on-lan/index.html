@@ -32,18 +32,18 @@
         });
     </script>
     
-<title>导出视频内嵌字幕文件的两个方法 - 瞎折腾分享</title>
+<title>通过网络唤醒(WOL)叫醒睡眠状态中的Mac - 瞎折腾分享</title>
 <meta name="author" content="fejich" />
-<meta name="description" content="都是为了能让 emby 能正常显示字幕" />
-<meta property="og:title" content="导出视频内嵌字幕文件的两个方法 - 瞎折腾分享" />
-<meta property="og:description" content="都是为了能让 emby 能正常显示字幕" />
+<meta name="description" content="通过意想不到的方法实现 Mac 的 WOL 唤醒" />
+<meta property="og:title" content="通过网络唤醒(WOL)叫醒睡眠状态中的Mac - 瞎折腾分享" />
+<meta property="og:description" content="通过意想不到的方法实现 Mac 的 WOL 唤醒" />
 <meta property="og:site_name" content="瞎折腾分享" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/archives/Export_subtitles/" />
+<meta property="og:url" content="/archives/waking-up-a-mac-with-wake-on-lan/" />
 <meta property="og:image" content="" />
-<meta property="article:published_time" content="2021-09-08T16:00:00-00.00" />
-<meta name="twitter:title" content="导出视频内嵌字幕文件的两个方法 - 瞎折腾分享" />
-<meta name="twitter:description" content="都是为了能让 emby 能正常显示字幕" />
+<meta property="article:published_time" content="2021-09-10T00:00:00-00.00" />
+<meta name="twitter:title" content="通过网络唤醒(WOL)叫醒睡眠状态中的Mac - 瞎折腾分享" />
+<meta name="twitter:description" content="通过意想不到的方法实现 Mac 的 WOL 唤醒" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:image" content="" />
 
@@ -94,7 +94,7 @@
                     
                     <section>
                         
-    <div class="open "><span><a href="/category/默认分类/">默认分类</a><button class="toggle_sidebar fa"></button></span><ul><li class=""><a href="/archives/waking-up-a-mac-with-wake-on-lan/">通过网络唤醒(WOL)叫醒睡眠状态中的Mac</a></li><li class="current"><a href="/archives/Export_subtitles/">导出视频内嵌字幕文件的两个方法</a></li><li class=""><a href="/archives/Synology_reverse_proxy/">群辉反代虚拟机套件noVNC窗口提示“无法连线到伺服器”的解决方法</a></li><li class=""><a href="/archives/bing-wallpaper/">unRAID 系统下定时运行脚本获取 bing每日壁纸</a></li><li class=""><a href="/archives/ssh_autologin/">SSH免密登录OpenWRT路由器并执行命令</a></li><li class=""><a href="/archives/rsync/">Linux系统下使用 rsync 代替 cp</a></li><li class=""><a href="/archives/qemu-img_resize/">unRAID 系统下虚拟机黑群辉硬盘无损扩容记录</a></li><li class=""><a href="/archives/my-first-awesome-post/">我的第一篇文章</a></li></ul></div><div class=" "><span><a href="/category/碎碎念/">碎碎念</a><button class="toggle_sidebar fa"></button></span><ul><li class=""><a href="/archives/IW-MS04/">迎广MS04机箱更换记录</a></li></ul></div>
+    <div class="open "><span><a href="/category/默认分类/">默认分类</a><button class="toggle_sidebar fa"></button></span><ul><li class="current"><a href="/archives/waking-up-a-mac-with-wake-on-lan/">通过网络唤醒(WOL)叫醒睡眠状态中的Mac</a></li><li class=""><a href="/archives/Export_subtitles/">导出视频内嵌字幕文件的两个方法</a></li><li class=""><a href="/archives/Synology_reverse_proxy/">群辉反代虚拟机套件noVNC窗口提示“无法连线到伺服器”的解决方法</a></li><li class=""><a href="/archives/bing-wallpaper/">unRAID 系统下定时运行脚本获取 bing每日壁纸</a></li><li class=""><a href="/archives/ssh_autologin/">SSH免密登录OpenWRT路由器并执行命令</a></li><li class=""><a href="/archives/rsync/">Linux系统下使用 rsync 代替 cp</a></li><li class=""><a href="/archives/qemu-img_resize/">unRAID 系统下虚拟机黑群辉硬盘无损扩容记录</a></li><li class=""><a href="/archives/my-first-awesome-post/">我的第一篇文章</a></li></ul></div><div class=" "><span><a href="/category/碎碎念/">碎碎念</a><button class="toggle_sidebar fa"></button></span><ul><li class=""><a href="/archives/IW-MS04/">迎广MS04机箱更换记录</a></li></ul></div>
 
                     </section>
                     <section hidden class="sidebar-external-link">
@@ -109,74 +109,77 @@
                 <div id="content-wrapper">
                     <div id="content">
     <section>
-        <h1 class="post-title">导出视频内嵌字幕文件的两个方法</h1>
+        <h1 class="post-title">通过网络唤醒(WOL)叫醒睡眠状态中的Mac</h1>
         <p class="post-meta">
-            <time>September 08 2021</time>
+            <time>September 10 2021</time>
             <span class="tags">
-                
-                <span>
-                    <a href="/tag/emby/">#emby</a>
-                </span>
-                
-                <span>
-                    <a href="/tag/ffmpeg/">#ffmpeg</a>
-                </span>
                 
                 <span>
                     <a href="/tag/Mac/">#Mac</a>
                 </span>
                 
+                <span>
+                    <a href="/tag/PC/">#PC</a>
+                </span>
+                
+                <span>
+                    <a href="/tag/WOL/">#WOL</a>
+                </span>
+                
             </span>
         </p>
-        <article class="yue"><h1>前言</h1>
-<p>一切起因是发现了 emby 这个媒体中心软件有个 “bug”</p>
-<p>内嵌了 .ass字幕 的视频如果是 directplay 方式（直接播放）字幕能正确显示，</p>
-<p>但是一旦触发了转码，字幕就得隔一分钟左右才能显示出来。</p>
-<p>而造成这么慢的原因，是因为实时导出字幕这个操作比较耗时（目前我尝试过好几个软件都得实现不了秒出）</p>
-<p>直接外挂的字幕就没这种烦恼，所以有了这个文章。</p>
-<h1>方法1 使用 mkvtoolnix 工具包</h1>
-<p>Mac 系统安装：<code>brew install mkvtoolnix</code></p>
-<p>查看文件信息：<code>mkvmerge -i test.mkv</code></p>
-<p><figure><img data-width="1072" data-height="658" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/52f96e940b323f773c2d4acf13b531bd.png" alt="mkvextract" /><figcaption>mkvextract</figcaption></figure></p>
-<p>可以看到 4 跟 5 是 ass 字幕</p>
-<p>导出命令：<code>mkvextract tracks test.mkv 4:sub1.ass 5:sub2.ass</code></p>
-<blockquote><p>mkvextract 在 win 系统下还有个 GUI ，其他系统就老实用 CUI 吧</p>
+        <article class="yue"><p><figure><img data-width="666" data-height="375" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/2ad706f17b373ae780b13f416f9f19d8.png" alt="WOL" /><figcaption>WOL</figcaption></figure></p>
+<h2>WOL 是什么</h2>
+<p>Wake-on-LAN简称WOL或WoL，中文多译为“网络唤醒”、“远程唤醒”技术。WOL是一种技术，同时也是该技术的规范标准，它的功效在于让休眠状态或关机状态的电脑，透过局域网的另一台电脑对其发令，使其唤醒、恢复成运作状态，或从关机状态转成引导状态。</p>
+<p>有关WOL技术，最初是在1997年4月由IBM公司的先进管理联盟（Advanced Manageability Alliance）所提出，然而当时仅约略透露，之后其他业者及产业也逐渐推行。</p>
+<blockquote><p>引用自：<a href="https://zh.wikipedia.org/wiki/網路喚醒">网络唤醒 - 维基百科，自由的百科全书 (wikipedia.org)</a></p>
 </blockquote>
-<p>批量操作脚本</p>
-<div class="highlight"><pre><span></span><span class="k">for</span> file <span class="k">in</span> *.mkv<span class="p">;</span> <span class="k">do</span>
-    <span class="nv">filename</span><span class="o">=</span><span class="si">${</span><span class="nv">file</span><span class="p">%.*</span><span class="si">}</span>
-    mkvextract tracks <span class="s2">&quot;</span><span class="si">${</span><span class="nv">file</span><span class="si">}</span><span class="s2">&quot;</span> <span class="m">4</span>:<span class="s2">&quot;</span><span class="si">${</span><span class="nv">filename</span><span class="si">}</span><span class="s2">.map4.ass&quot;</span> <span class="m">4</span>:<span class="s2">&quot;</span><span class="si">${</span><span class="nv">filename</span><span class="si">}</span><span class="s2">.map5.ass&quot;</span>
-<span class="k">done</span>
+<h2>Mac 电脑的 WOL 支持情况</h2>
+<p>WOL 基本上是个 PC电脑 都支持，然而苹果嘛~~不跟 PC 厂们玩这一套。</p>
+<p>Mac 并没有完整支持 WOL ，<strong>关机状态</strong>是无法使用 WOL 唤醒的（黑苹果倒是支持关机唤醒）</p>
+<p>但是会在<strong>睡眠状态</strong>下对会对 WOL 的<strong>魔法数据包</strong>（Magic Packet）有所反应，进入一个类似Android手机<strong>超级省电模式</strong>的状态。</p>
+<ul>
+<li>屏幕保持着关闭</li>
+<li>各种 App 也并没有运行</li>
+<li>机器会对 ping 的请求有所回应</li>
+<li>部分网络服务像是 文件共享 和 SSH远程登陆 能工作（前提是你在<strong>系统偏好设置</strong>打开了该功能）</li>
+</ul>
+<p>这时候唯有通过按下键盘鼠标的按键才能真正唤醒 Mac</p>
+<h2>通过 WOL 唤醒 Mac 的方法</h2>
+<p>由于睡眠状态下 Mac 会对 WOL 有所反应，而且可以进行 SSH远程登陆。</p>
+<p>所以可以通过其他电脑 SSH 访问 Mac 执行 <code>caffeinate</code> 命令模拟鼠标键盘按键，实现曲线救国！</p>
+<h3>1）Mac 上的设置</h3>
+<p><figure><img data-width="1560" data-height="1146" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/58e2b13fc1e5a7e6db87d932d960a175.png" alt="节能" /><figcaption>节能</figcaption></figure></p>
+<p><figure><img data-width="1560" data-height="1312" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/4bc925bd999580df1f0d377d29c8b77a.png" alt="开启SSH" /><figcaption>开启SSH</figcaption></figure></p>
+<p>开启服务后，在 系统偏好设置 <code>→</code> 网络 找到 IP 与 MAC地址 记下来后续操作要用到</p>
+<p>让机器进入睡眠状态</p>
+<h3>2）其他电脑执行命令唤醒 Mac</h3>
+<p>于另一台电脑上，执行以下命令即可唤醒 Mac ！</p>
+<div class="highlight"><pre><span></span>etherwake <span class="o">{</span>Mac_MAC_ADDRESS<span class="o">}</span>
+ssh <span class="o">{</span>MacUserName<span class="o">}</span>@<span class="o">{</span>MacIP<span class="o">}</span> <span class="s1">&#39;caffeinate -u -t 1&#39;</span>
 </pre></div>
-<h1>方法2 使用 ffmpeg</h1>
-<p>查看文件信息：<code>ffmpeg -i test.mkv</code></p>
-<p>导出字幕：<code>ffmpeg -i test.mkv -map 0:5 sub.ass</code></p>
-<blockquote><p>ffmpeg 还可以给字幕转格式，例如 ass 转 srt。只要指定输出的格式就会自动处理</p>
+<h4>[可选]配置 ssh 免密码登陆 Mac</h4>
+<div class="highlight"><pre><span></span>ssh-keygen -t rsa
+</pre></div>
+<blockquote><p>连续三次回车,即在本地主机上生成了公钥和私钥,不设置密码</p>
 </blockquote>
-<p>批量操作脚本</p>
-<div class="highlight"><pre><span></span><span class="k">for</span> file <span class="k">in</span> *.mkv<span class="p">;</span> <span class="k">do</span>
-    <span class="nv">filename</span><span class="o">=</span><span class="si">${</span><span class="nv">file</span><span class="p">%.*</span><span class="si">}</span>
-    ffmpeg -i <span class="s2">&quot;</span><span class="si">${</span><span class="nv">file</span><span class="si">}</span><span class="s2">&quot;</span> -map <span class="m">0</span>:2 <span class="s2">&quot;</span><span class="si">${</span><span class="nv">filename</span><span class="si">}</span><span class="s2">.map2.ass&quot;</span> -map <span class="m">0</span>:3 <span class="s2">&quot;</span><span class="si">${</span><span class="nv">filename</span><span class="si">}</span><span class="s2">.map3.ass&quot;</span> -map <span class="m">0</span>:4 <span class="s2">&quot;</span><span class="si">${</span><span class="nv">filename</span><span class="si">}</span><span class="s2">.map4.ass&quot;</span> -map <span class="m">0</span>:5 <span class="s2">&quot;</span><span class="si">${</span><span class="nv">filename</span><span class="si">}</span><span class="s2">.map5.ass&quot;</span>
-<span class="k">done</span>
+<div class="highlight"><pre><span></span>cat ~/.ssh/id_rsa.pub <span class="p">|</span> ssh <span class="o">{</span>MacUserName<span class="o">}</span>@<span class="o">{</span>MacIP<span class="o">}</span> <span class="s1">&#39;mkdir .ssh ;cat &gt;&gt; .ssh/authorized_keys&#39;</span>
 </pre></div>
+<blockquote><p>将本地密钥写入到 Mac 主机信任列表内</p>
+</blockquote>
+<hr>
+<p>参考：<a href="https://www.tweaking4all.com/forum/macos-x-software/waking-up-a-mac-with-wake-on-lan/">Waking up a Mac with Wake On LAN – MacOS X Software – Forum</a></p>
 </article>
     </section>
 
     
     <section id="content-pager">
         
-            <div class="next">
+        
+            <div class="prev">
                 <a class="card" href="/archives/IW-MS04/">
                     <time>September 09 2021</time>
                     <span>迎广MS04机箱更换记录</span>
-                </a>
-            </div>
-        
-        
-            <div class="prev">
-                <a class="card" href="/archives/Synology_reverse_proxy/">
-                    <time>September 08 2021</time>
-                    <span>群辉反代虚拟机套件noVNC窗口提示“无法连线到伺服器”的解决方法</span>
                 </a>
             </div>
         
