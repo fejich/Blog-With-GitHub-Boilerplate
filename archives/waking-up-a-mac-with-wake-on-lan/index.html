@@ -19,7 +19,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/91266d3af24391e8924da53c2df3f683.json"
+            api: "https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/9ddde595f3161b5cfecedc1276e20125.json"
         }
     </script>
     <script>
@@ -128,7 +128,7 @@
                 
             </span>
         </p>
-        <article class="yue"><p><img src="通过网络唤醒(WOL)叫醒睡眠状态中的Mac.assets/WOL.png" alt="WOL" style="zoom:50%;" /></p>
+        <article class="yue"><p><figure><img data-width="-1" data-height="-1" src="通过网络唤醒(WOL" alt="WOL" /><figcaption>WOL</figcaption></figure>叫醒睡眠状态中的Mac.assets/WOL.png)</p>
 <h2>WOL 是什么</h2>
 <p>Wake-on-LAN简称WOL或WoL，中文多译为“网络唤醒”、“远程唤醒”技术。WOL是一种技术，同时也是该技术的规范标准，它的功效在于让休眠状态或关机状态的电脑，透过局域网的另一台电脑对其发令，使其唤醒、恢复成运作状态，或从关机状态转成引导状态。</p>
 <p>有关WOL技术，最初是在1997年4月由IBM公司的先进管理联盟（Advanced Manageability Alliance）所提出，然而当时仅约略透露，之后其他业者及产业也逐渐推行。</p>
@@ -159,10 +159,12 @@
 ssh <span class="o">{</span>MacUserName<span class="o">}</span>@<span class="o">{</span>MacIP<span class="o">}</span> <span class="s1">&#39;caffeinate -u -t 1&#39;</span>
 </pre></div>
 <h4>[可选]配置 ssh 免密码登陆 Mac</h4>
-<p><code>ssh-keygen -t rsa</code></p>
+<div class="highlight"><pre><span></span>ssh-keygen -t rsa
+</pre></div>
 <blockquote><p>连续三次回车,即在本地主机上生成了公钥和私钥,不设置密码</p>
 </blockquote>
-<p><code>cat ~/.ssh/id_rsa.pub | ssh {MacUserName}@{MacIP} 'mkdir .ssh ;cat &gt;&gt; .ssh/authorized_keys'</code></p>
+<div class="highlight"><pre><span></span>cat ~/.ssh/id_rsa.pub <span class="p">|</span> ssh <span class="o">{</span>MacUserName<span class="o">}</span>@<span class="o">{</span>MacIP<span class="o">}</span> <span class="s1">&#39;mkdir .ssh ;cat &gt;&gt; .ssh/authorized_keys&#39;</span>
+</pre></div>
 <blockquote><p>将本地密钥写入到 Mac 主机信任列表内</p>
 </blockquote>
 <hr>
