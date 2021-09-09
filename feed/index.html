@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>瞎折腾分享</title><link>/</link><description>记录分享一些个人日常</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/logo.png</url><title>瞎折腾分享</title><link>/</link></image><language>zh-CN</language><lastBuildDate>Thu, 09 Sep 2021 09:17:00 +0806</lastBuildDate><pubDate>Thu, 09 Sep 2021 09:17:00 +0806</pubDate><item><title>我的第一篇文章</title><link>/archives/my-first-awesome-post/</link><description>&lt;p&gt;这是我的第一篇文章。文章使用 GitHub 管理，并通过 GitHub Actions 自动构建与发布！&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>瞎折腾分享</title><link>/</link><description>记录分享一些个人日常</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/logo.png</url><title>瞎折腾分享</title><link>/</link></image><language>zh-CN</language><lastBuildDate>Thu, 09 Sep 2021 16:06:54 +0806</lastBuildDate><pubDate>Thu, 09 Sep 2021 16:06:54 +0806</pubDate><item><title>我的第一篇文章</title><link>/archives/my-first-awesome-post/</link><description>&lt;p&gt;这是我的第一篇文章。文章使用 GitHub 管理，并通过 GitHub Actions 自动构建与发布！&lt;/p&gt;
 &lt;p&gt;&lt;figure&gt;&lt;img data-width="836" data-height="450" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/e0affbc80ccb2d596c87b520e37e7071.jpg" alt="幽灵公主剧照" /&gt;&lt;figcaption&gt;幽灵公主剧照&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 </description><author>hi@imalan.cn (fejich)</author><guid isPermaLink="true">/archives/my-first-awesome-post/</guid><pubDate>Tue, 07 Sep 2021 14:20:00 +0806</pubDate></item><item><title>unRAID 系统下虚拟机黑群辉硬盘无损扩容记录</title><link>/archives/qemu-img_resize/</link><description>&lt;h1&gt;0）测试环境&lt;/h1&gt;
 &lt;p&gt;黑群辉DSM 6.1.X，Basic 磁盘，btrfs 分区格式
@@ -255,4 +255,43 @@ alias rcp="rsync -ah --info=progress2 --no-i-r"&lt;/code&gt;&lt;/pre&gt;
 &lt;h1&gt;最后记念下旧机箱&lt;/h1&gt;
 &lt;p&gt;相册里边翻出 2015.05.13 号拍的万由4盘位NAS整机开箱，即使从今天来看这个做工跟设计都是很给力的。希望万由日后能设计出更出色的NAS机箱，让消费者可以有更多靠谱的NAS机箱选择。&lt;/p&gt;
 &lt;p&gt;&lt;figure&gt;&lt;img data-width="3074" data-height="1386" src="https://cdn.jsdelivr.net/gh/fejich/fejich.github.io@gh-pages/archives/assets/17f30efb0dfdd0ff8e4bc13bcbaf6b8b.png" alt="截屏2021-09-09" /&gt;&lt;figcaption&gt;截屏2021-09-09&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
-</description><author>hi@imalan.cn (fejich)</author><guid isPermaLink="true">/archives/IW-MS04/</guid><pubDate>Thu, 09 Sep 2021 17:00:00 +0806</pubDate></item></channel></rss>
+</description><author>hi@imalan.cn (fejich)</author><guid isPermaLink="true">/archives/IW-MS04/</guid><pubDate>Thu, 09 Sep 2021 17:00:00 +0806</pubDate></item><item><title>通过网络唤醒(WOL)叫醒睡眠状态中的Mac</title><link>/archives/waking-up-a-mac-with-wake-on-lan/</link><description>&lt;p&gt;&lt;img src="通过网络唤醒(WOL)叫醒睡眠状态中的Mac.assets/WOL.png" alt="WOL" style="zoom:50%;" /&gt;&lt;/p&gt;
+&lt;h2&gt;WOL 是什么&lt;/h2&gt;
+&lt;p&gt;Wake-on-LAN简称WOL或WoL，中文多译为“网络唤醒”、“远程唤醒”技术。WOL是一种技术，同时也是该技术的规范标准，它的功效在于让休眠状态或关机状态的电脑，透过局域网的另一台电脑对其发令，使其唤醒、恢复成运作状态，或从关机状态转成引导状态。&lt;/p&gt;
+&lt;p&gt;有关WOL技术，最初是在1997年4月由IBM公司的先进管理联盟（Advanced Manageability Alliance）所提出，然而当时仅约略透露，之后其他业者及产业也逐渐推行。&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;引用自：&lt;a href="https://zh.wikipedia.org/wiki/網路喚醒"&gt;网络唤醒 - 维基百科，自由的百科全书 (wikipedia.org)&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Mac 电脑的 WOL 支持情况&lt;/h2&gt;
+&lt;p&gt;WOL 基本上是个 PC电脑 都支持，然而苹果嘛~~不跟 PC 厂们玩这一套。&lt;/p&gt;
+&lt;p&gt;Mac 并没有完整支持 WOL ，&lt;strong&gt;关机状态&lt;/strong&gt;是无法使用 WOL 唤醒的（黑苹果倒是支持关机唤醒）&lt;/p&gt;
+&lt;p&gt;但是会在&lt;strong&gt;睡眠状态&lt;/strong&gt;下对会对 WOL 的&lt;strong&gt;魔法数据包&lt;/strong&gt;（Magic Packet）有所反应，进入一个类似Android手机&lt;strong&gt;超级省电模式&lt;/strong&gt;的状态。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;屏幕保持着关闭&lt;/li&gt;
+&lt;li&gt;各种 App 也并没有运行&lt;/li&gt;
+&lt;li&gt;机器会对 ping 的请求有所回应&lt;/li&gt;
+&lt;li&gt;部分网络服务像是 文件共享 和 SSH远程登陆 能工作（前提是你在&lt;strong&gt;系统偏好设置&lt;/strong&gt;打开了该功能）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这时候唯有通过按下键盘鼠标的按键才能真正唤醒 Mac&lt;/p&gt;
+&lt;h2&gt;通过 WOL 唤醒 Mac 的方法&lt;/h2&gt;
+&lt;p&gt;由于睡眠状态下 Mac 会对 WOL 有所反应，而且可以进行 SSH远程登陆。&lt;/p&gt;
+&lt;p&gt;所以可以通过其他电脑 SSH 访问 Mac 执行 &lt;code&gt;caffeinate&lt;/code&gt; 命令模拟鼠标键盘按键，实现曲线救国！&lt;/p&gt;
+&lt;h3&gt;1）Mac 上的设置&lt;/h3&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img data-width="-1" data-height="-1" src="通过网络唤醒(WOL" alt="节能" /&gt;&lt;figcaption&gt;节能&lt;/figcaption&gt;&lt;/figure&gt;叫醒睡眠状态中的Mac.assets/节能.png)&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img data-width="-1" data-height="-1" src="通过网络唤醒(WOL" alt="开启SSH" /&gt;&lt;figcaption&gt;开启SSH&lt;/figcaption&gt;&lt;/figure&gt;叫醒睡眠状态中的Mac.assets/开启SSH.png)&lt;/p&gt;
+&lt;p&gt;开启服务后，在 系统偏好设置 &lt;code&gt;→&lt;/code&gt; 网络 找到 IP 与 MAC地址 记下来后续操作要用到&lt;/p&gt;
+&lt;p&gt;让机器进入睡眠状态&lt;/p&gt;
+&lt;h3&gt;2）其他电脑执行命令唤醒 Mac&lt;/h3&gt;
+&lt;p&gt;于另一台电脑上，执行以下命令即可唤醒 Mac ！&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;etherwake &lt;span class="o"&gt;{&lt;/span&gt;Mac_MAC_ADDRESS&lt;span class="o"&gt;}&lt;/span&gt;
+ssh &lt;span class="o"&gt;{&lt;/span&gt;MacUserName&lt;span class="o"&gt;}&lt;/span&gt;@&lt;span class="o"&gt;{&lt;/span&gt;MacIP&lt;span class="o"&gt;}&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;caffeinate -u -t 1&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;[可选]配置 ssh 免密码登陆 Mac&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;ssh-keygen -t rsa&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;连续三次回车,即在本地主机上生成了公钥和私钥,不设置密码&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;cat ~/.ssh/id_rsa.pub | ssh {MacUserName}@{MacIP} 'mkdir .ssh ;cat &amp;gt;&amp;gt; .ssh/authorized_keys'&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;将本地密钥写入到 Mac 主机信任列表内&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;参考：&lt;a href="https://www.tweaking4all.com/forum/macos-x-software/waking-up-a-mac-with-wake-on-lan/"&gt;Waking up a Mac with Wake On LAN – MacOS X Software – Forum&lt;/a&gt;&lt;/p&gt;
+</description><author>hi@imalan.cn (fejich)</author><guid isPermaLink="true">/archives/waking-up-a-mac-with-wake-on-lan/</guid><pubDate>Fri, 10 Sep 2021 00:00:00 +0806</pubDate></item></channel></rss>
